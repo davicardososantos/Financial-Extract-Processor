@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = (
-    "postgresql://integra:integra123@127.0.0.1:5433/integra"
+    "postgresql://admin:password123@database:5432/financial_db"
 )
 
 engine = create_engine(DATABASE_URL)
