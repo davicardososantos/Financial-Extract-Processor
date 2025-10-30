@@ -1,6 +1,6 @@
-from app.domain.user.entities import Usuario
-from app.domain.user.value_objects import Email
-from app.domain.user.repository import UsuarioRepository
+from app.domain.entities.usuario import Usuario
+from app.domain.value_objects.email import Email
+from app.domain.repository.usuario import UsuarioRepository
 from app.application.user.dto.usuario_input_dto import UsuarioInputDTO
 from app.core.security import gerar_hash_senha
 

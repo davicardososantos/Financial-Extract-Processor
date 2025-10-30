@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, DateTime
+from sqlalchemy import Column, String, DateTime, Boolean
 from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime
 import uuid
@@ -13,4 +13,5 @@ class UsuarioORM(Base):
     nome = Column(String, nullable=False)
     email = Column(String, unique=True, nullable=False)
     senha_hash = Column(String, nullable=False)
+    ativo = Column(Boolean, default=True, nullable=False) 
     criado_em = Column(DateTime, default=datetime.utcnow)

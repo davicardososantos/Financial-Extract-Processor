@@ -4,6 +4,7 @@ from app.api.auth.auth_router import router as auth_router
 from app.api.user.router import router as usuario_router
 from app.infrastructure.db.base import Base
 from app.infrastructure.db.session import engine
+from app.infrastructure.models import *
 
 security = HTTPBearer()
 
@@ -16,6 +17,7 @@ app = FastAPI(
 
 # Cria as tabelas
 Base.metadata.create_all(bind=engine)
+
 
 # Registra rotas
 app.include_router(usuario_router, prefix="/api")

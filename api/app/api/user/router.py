@@ -3,7 +3,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from app.application.user.dto.usuario_input_dto import UsuarioInputDTO
 from app.application.user.use_cases.criar_usuario import CriarUsuarioUseCase
 from app.api.user.dependencies import get_usuario_repository
-from app.domain.user.repository import UsuarioRepository
+from app.domain.repository.usuario import UsuarioRepository
 from app.application.user.use_cases.listar_usuarios import ListarUsuariosUseCase
 from app.core.security import verificar_token 
 

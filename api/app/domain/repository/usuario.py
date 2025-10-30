@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from .entities import Usuario
+from app.domain.entities.usuario import Usuario
 
 class UsuarioRepository(ABC):
     @abstractmethod

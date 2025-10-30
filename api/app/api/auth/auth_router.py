@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.core.security import criar_token, verificar_senha
-from app.domain.user.repository import UsuarioRepository
+from app.domain.repository.usuario import UsuarioRepository
 from app.api.user.dependencies import get_usuario_repository
 from pydantic import BaseModel
 

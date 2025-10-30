@@ -49,7 +49,7 @@ def test_database_session_import():
 def test_models_import():
     """Testa se os modelos podem ser importados"""
     try:
-        from app.infrastructure.user.models import UsuarioORM
+        from app.infrastructure.models.usuario import UsuarioORM
         assert UsuarioORM is not None
         assert UsuarioORM.__tablename__ == "usuarios"
         print("✅ Modelo UsuarioORM importado")

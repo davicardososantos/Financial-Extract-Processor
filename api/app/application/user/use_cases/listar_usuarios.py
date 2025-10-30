@@ -1,4 +1,4 @@
-from app.domain.user.repository import UsuarioRepository
+from app.domain.repository.usuario import UsuarioRepository
 
 class ListarUsuariosUseCase:
     def __init__(self, repositorio: UsuarioRepository):

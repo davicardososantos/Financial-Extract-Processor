@@ -1,7 +1,7 @@
 from fastapi import Depends
 from sqlalchemy.orm import Session
 from app.infrastructure.db.session import SessionLocal
-from app.infrastructure.user.repository_impl import UsuarioRepositoryImpl
+from app.infrastructure.repository.usuario_repository import UsuarioRepositoryImpl
 
 def get_db():
     db = SessionLocal()
