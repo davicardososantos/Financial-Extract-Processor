@@ -13,6 +13,7 @@ class CategoriaORM(Base):
     nome = Column(String(100), nullable=False)
     descricao = Column(String(255), nullable=True)
     cor = Column(String(7), nullable=False)  # #FFFFFF
+    icone = Column(String(50), nullable=False, default="📁")
     criado_em = Column(DateTime, default=datetime.utcnow, nullable=False)
     alterado_em = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     deletado_em = Column(DateTime, nullable=True)

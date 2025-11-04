@@ -18,3 +18,4 @@ class ContaORM(Base):
     alterado_em = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     deletado_em = Column(DateTime, nullable=True)
     cliente = relationship("ClienteORM", back_populates="contas", lazy="select")
+    cartoes_credito = relationship("CartaoCreditoORM", back_populates="conta", lazy="select")

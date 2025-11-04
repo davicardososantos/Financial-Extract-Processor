@@ -59,8 +59,8 @@ def test_models_import():
 def test_routers_import():
     """Testa se os routers podem ser importados"""
     try:
-        from app.api.user.router import router as usuario_router
-        from app.api.auth.auth_router import router as auth_router
+        from app.api.usuario.router import router as usuario_router
+        from app.api.auth.router import router as auth_router
         assert usuario_router is not None
         assert auth_router is not None
         print("✅ Routers importados")

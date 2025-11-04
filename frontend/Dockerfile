@@ -13,4 +13,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para desenvolvimento
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3000"]

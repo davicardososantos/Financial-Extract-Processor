@@ -12,7 +12,12 @@ class ClienteORM(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     nome = Column(String, nullable=False)
+    email = Column(String, unique=True, nullable=False)  
+    cpf = Column(String, unique=True, nullable=False)    
+    data_nascimento = Column(DateTime, nullable=False)   
+    telefone = Column(String, nullable=True)             
     criado_em = Column(DateTime, default=datetime.utcnow, nullable=False)
     alterado_em = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     deletado_em = Column(DateTime, nullable=True)
     contas = relationship("ContaORM", back_populates="cliente", lazy="select")
+    cartoes_credito = relationship("CartaoCreditoORM", back_populates="cliente", lazy="select")
